@@ -2,10 +2,12 @@ from django.shortcuts import render
 from .models import Store
 
 def main(request, *args, **kwargs):
-    return
+    return render(request, 'home.html', {})
 
 def register(request, *args, **kwargs):
-    return
+    if request.method == "POST":
+        return
+    return render(request, 'signup.html', {})
 
 def login(request, *args, **kwargs):
     return
