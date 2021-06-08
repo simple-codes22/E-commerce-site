@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'CSS/reg.css' %}">
+{% block title%}
+    <title>E-commerce | Sign-Up</title>
+{% endblock %}
+
+{% block main %}
+    <div class="register-div">
+        <form action="" method="post">{% csrf_token %}
+            <div class="name">
+                <label for="first-name">First name: </label>
+                <input type="text" name="first-name" required='required' id="first-name" class="names" placeholder="Text here">
+                <label for="last-name">Last name: </label>
+                <input type="text" name="last-name" required='required' id="last-name" class="names" placeholder="Text here">
+            </div>
+            <label for="age">Age:</label>
+            <input type="text" name="age" required='required' id="age" max='3' maxlength="3" width="3" class="age">
+            <label for="user-name">Username:</label>
+            <input type="text" name="user-name" required='required' class="text">
+            <label for="password">Password</label>
+            <input type="password" required='required' name="password" id="text">
+            <label for="e-main">E-Mail Address:</label>
+            <input type="email" required='required' name="e-mail" id="e-mail" class="text">
+            <button class="btn">Sign-Up</button>
+        </form>
+    </div>
+{% endblock %}

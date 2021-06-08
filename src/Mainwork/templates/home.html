@@ -1,1 +1,36 @@
-Hello
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    <link rel="stylesheet" href="{% static 'CSS/main.css'%}">
+    <title>E-commerce | Home</title>
+{% endblock %}
+
+{% block main %}
+    <main class="home-main">
+        <!-- Carousel(Jumbotron) -->
+        <div class="jumbo">
+            <div class="content" id="content">
+                <div class="content-head">Awesome Kicks</div>
+                <div class="content-main">Shop the shoes you desire to have</div>
+            </div>
+        </div>
+        <!-- div which shows the categories of products -->
+        <div class="categories">
+
+            <div class="individual-cat" id="individ-cat">
+                <div class="main-cat">
+                    <div class="desc-cat" >Clothing</div>
+                    <img class="cat-img" src="../static/images/Clothing/Clothing-2.jpg" alt="">
+                </div>
+                <a href="#" class="cat-ref">More</a>
+            </div>
+
+        </div>
+        <div class="product-demo">
+            <div class="demos" id="demos"></div>
+        </div>
+    </main>
+    <script src="{% static 'JavaScript/main.js'%}"></script>
+{%endblock%}

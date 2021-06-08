@@ -1,0 +1,76 @@
+:root {
+    --green: rgba(240, 240, 240, 0.925);
+    --black: rgba(48, 48, 48, 0.842);
+    --white: rgba(255, 255, 255, 0.952);
+    --extra: rgb(128, 64, 5);
+    --shoes: rgba(87, 44, 44, 0.87);
+    --gaming: rgba(255, 255, 255, 0.877);
+}
+.jumbo {
+    background: url("../images/Showcase/Clothing-6.jpg") no-repeat fixed center;
+    background-size:cover;
+    height:500px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size:20px;
+    color:var(--shoes);
+}
+.content-head {
+    font-size: 60px;
+    font-weight: bold;
+}
+.content-main {
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+.categories {
+    height: 800px;
+    padding:20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: flex-start;
+}
+.individual-cat {
+    padding:10px;
+    width:250px;
+    height:300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background:rgba(134, 69, 107, 0.26);
+    backdrop-filter: blur(10px);
+}
+.main-cat {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.cat-img {
+    width:80%;
+    height:30vh;
+}
+.desc-cat {
+    margin-bottom:10px;
+    text-transform: capitalize;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+.cat-ref {
+    color:black;
+    margin-top:5px;
+}
+
