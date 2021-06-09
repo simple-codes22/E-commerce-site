@@ -30,7 +30,7 @@ def login(request, *args, **kwargs):
     return render(request, 'login.html', {})
 
 def dashboard(request, id, user_name, *args, **kwargs):
-    return render(request, 'dashboard.html', {'user_content': Store.objects.get(id=id)})
+    return render(request, 'dashboard.html', {'user_content': Store.objects.get(id=id, user_name=user_name)})
 
 def support(request, id, user_name, *args, **kwargs):
     return
