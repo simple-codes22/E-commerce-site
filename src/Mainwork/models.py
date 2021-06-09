@@ -11,6 +11,3 @@ class Store(models.Model):
     Amount = models.DecimalField(decimal_places=2, max_digits=10000)
     date_registered = models.DateField()
     password = models.CharField(max_length=30, unique=True)
-
-    def access_user(self):
-        return reverse('users:dash', kwargs={'id':self.id, 'user_name': self.user_name, 'password': self.password})
