@@ -2,9 +2,11 @@
 
 {% load static %}
 
-{% block title %}
-    <link rel="stylesheet" href="{% static 'CSS/main.css'%}">
-    <title>E-commerce | Home</title>
+{% block style %}<link rel="stylesheet" href="{% static 'CSS/main.css'%}">{% endblock %}
+{% block title %}Home{% endblock %}
+{% block sign_up_and_login%}
+    <li class="nav-items"><a href="{% url 'users:new'%}" class="nav-links">Sign Up</a></li>
+    <li class="nav-items"><a href="{% url 'users:login'%}" class="nav-links">Login</a></li>
 {% endblock %}
 
 {% block main %}

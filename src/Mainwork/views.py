@@ -33,8 +33,8 @@ def login(request, *args, **kwargs):
 def dashboard(request, id, user_name, *args, **kwargs):
     return render(request, 'dashboard.html', {'user_content': Store.objects.get(id=id, user_name=user_name)})
 
-def support(request, id, user_name, *args, **kwargs):
-    return
+def support(request, *args, **kwargs):
+    return render(request, 'support.html', {})
 
 
 # Create your views here.
