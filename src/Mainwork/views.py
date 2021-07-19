@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.urls import reverse
 from .models import Store
 from datetime import date
 from django.db.utils import IntegrityError
@@ -21,9 +22,9 @@ def register(request, *args, **kwargs):
                 password=form_.get('password')
             )
             temp_redir = Store.objects.get(user_name=form_.get('user-name'), password=form_.get('password'))
-            return redirect(F"http://127.0.0.1:8000/dash/{temp_redir.id}/{temp_redir.user_name}/")
+            return redirect(reverse("users:dash", kwargs={"id": temp_redir.id, "user_name": temp_redir.user_name}))
         except IntegrityError:
-            return render(request, 'signup.html', {})
+            return render(request, 'signup.html', {'message': "Could not sign up."})
     return render(request, 'signup.html', {})
 
 def login(request, *args, **kwargs):

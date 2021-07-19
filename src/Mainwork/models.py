@@ -11,3 +11,6 @@ class Store(models.Model):
     Amount = models.DecimalField(decimal_places=2, max_digits=10000)
     date_registered = models.DateField()
     password = models.CharField(max_length=30, unique=True)
+
+    def __repr__(self):
+        return f"User: {self.user_name}, ID: {self.id}"
